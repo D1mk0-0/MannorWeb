@@ -1,31 +1,81 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Mannor - производитель качественных автомобильных запчастей. Оригинальные детали для всех марок автомобилей.">
-    <meta name="keywords" content="автозапчасти, Mannor, автомобильные детали, производитель запчастей">
+    <meta name="description" content="MR MANNOR - manufacturer of high-quality automotive parts. Original parts for all car brands.">
+    <meta name="keywords" content="auto parts, MR MANNOR, automotive parts, parts manufacturer">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 
-    <!-- Font Awesome для иконок -->
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Основной CSS -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Mannor | Производитель автомобильных запчастей</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/mr-mannor.css">
+
+    <title>MR MANNOR | Automotive Parts Manufacturer</title>
+
+    <style>
+        :root {
+            --primary-blue: #0066cc;
+            --primary-red: #cc0000;
+            --secondary-blue: #004d99;
+            --secondary-red: #990000;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-blue);
+            border-color: var(--secondary-blue);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            color: white;
+        }
+        
+        .text-primary {
+            color: var(--primary-blue) !important;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: var(--primary-red) !important;
+        }
+    </style>
 </head>
 
 <body>
-<!-- Навигация -->
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="assets/img/mannor_logo.PNG" alt="Mannor" height="40">
+            <img src="assets/img/mr_mannor_logo.png" class="navbar-logo" alt="MR MANNOR">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -33,203 +83,266 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#products">Продукция</a>
+                    <a class="nav-link" href="#products">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">О нас</a>
+                    <a class="nav-link" href="#about">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#gallery">Галерея</a>
+                    <a class="nav-link" href="#gallery">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contacts">Контакты</a>
+                    <a class="nav-link" href="#contacts">Contacts</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Герой-секция -->
-<header class="hero-section bg-primary text-white py-5">
+<!-- Hero Section -->
+<header class="hero-section py-5">
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h1 class="display-4 fw-bold mb-4">Качественные автозапчасти от Mannor</h1>
-                <p class="lead mb-4">Оригинальные детали для всех марок автомобилей с гарантией качества и доставкой по всей стране.</p>
-                <a href="#products" class="btn btn-light btn-lg px-4 me-2">Каталог</a>
-                <a href="#contacts" class="btn btn-outline-light btn-lg px-4">Контакты</a>
+                <h1 class="display-4 fw-bold mb-4">Quality Auto Parts by MR MANNOR</h1>
+                <p class="lead mb-4">Original parts for all car brands with quality guarantee and nationwide delivery.</p>
+                <a href="#products" class="btn btn-light btn-lg px-4 me-2">Catalog</a>
+                <a href="#contacts" class="btn btn-outline-light btn-lg px-4">Contacts</a>
             </div>
-            <div class="col-lg-6 d-none d-lg-block">
-                <img src="assets/img/main_image.png" alt="Автозапчасти Mannor" class="img-fluid rounded">
+            <div class="col-lg-6 d-none d-lg-block text-center">
+                <div class="hero-image-container">
+                    <img src="assets/img/main_image_1.png" alt="MR MANNOR Auto Parts" class="hero-image active rounded">
+                    <img src="assets/img/main_image_2.png" alt="MR MANNOR Quality Parts" class="hero-image rounded">
+                    <img src="assets/img/main_image_3.png" alt="MR MANNOR Production" class="hero-image rounded">
+                    <div class="hero-image-overlay"></div>
+                    <div class="hero-slider-indicators">
+                        <div class="hero-slider-indicator active" data-index="0"></div>
+                        <div class="hero-slider-indicator" data-index="1"></div>
+                        <div class="hero-slider-indicator" data-index="2"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Преимущества -->
+<!-- Advantages -->
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row g-4 text-center">
             <div class="col-md-3">
-                <div class="p-4 bg-white rounded shadow-sm">
-                    <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
-                    <h3>Гарантия качества</h3>
-                    <p>Все детали проходят строгий контроль перед отправкой</p>
+                <div class="p-4 bg-white rounded shadow-sm h-100 d-flex flex-column">
+                    <i class="fas fa-shield-alt fa-3x mb-3" style="color: #0066cc;"></i>
+                    <h3>Quality Guarantee</h3>
+                    <p class="flex-grow-1">All parts undergo strict quality control before shipping</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="p-4 bg-white rounded shadow-sm">
-                    <i class="fas fa-truck fa-3x text-primary mb-3"></i>
-                    <h3>Быстрая доставка</h3>
-                    <p>Отправка в день заказа по всей стране</p>
+                <div class="p-4 bg-white rounded shadow-sm h-100 d-flex flex-column">
+                    <i class="fas fa-truck fa-3x mb-3" style="color: #0066cc;"></i>
+                    <h3>Fast Delivery</h3>
+                    <p class="flex-grow-1">Same-day shipping nationwide</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="p-4 bg-white rounded shadow-sm">
-                    <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
-                    <h3>Широкий ассортимент</h3>
-                    <p>Более 5000 наименований в каталоге</p>
+                <div class="p-4 bg-white rounded shadow-sm h-100 d-flex flex-column">
+                    <i class="fas fa-cogs fa-3x mb-3" style="color: #0066cc;"></i>
+                    <h3>Wide Range</h3>
+                    <p class="flex-grow-1">Over 5000 items in catalog</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="p-4 bg-white rounded shadow-sm">
-                    <i class="fas fa-headset fa-3x text-primary mb-3"></i>
-                    <h3>Техподдержка</h3>
-                    <p>Консультации по подбору запчастей</p>
+                <div class="p-4 bg-white rounded shadow-sm h-100 d-flex flex-column">
+                    <i class="fas fa-headset fa-3x mb-3" style="color: #0066cc;"></i>
+                    <h3>Technical Support</h3>
+                    <p class="flex-grow-1">Consultations on parts selection</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Продукция -->
-<section id="products" class="py-5">
+<!-- Gallery with Carousel -->
+<section id="gallery" class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Наша продукция</h2>
-            <p class="text-muted">Высококачественные автозапчасти для всех марок автомобилей</p>
+            <h2 class="fw-bold">Our Production</h2>
+            <p class="text-muted">Main components of cooling systems</p>
+        </div>
+
+        <div class="row mt-4 g-3">
+            <div class="col-md-3 col-6 mb-3">
+
+                <div class="gallery-item-wrapper">
+                    <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="assets/img/production-1.jpg">
+                        <div class="image-container portrait">
+                            <img src="assets/img/photo_2025-09-17_20-01-39.jpg" alt="Production process" 
+                                 class="gallery-image">
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+
+                <div class="gallery-item-wrapper">
+                    <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="assets/img/production-1.jpg">
+                        <div class="image-container portrait">
+                            <img src="assets/img/photo_2025-09-17_20-01-18.jpg" alt="Production process" 
+                                 class="gallery-image">
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+
+                <div class="gallery-item-wrapper">
+                    <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="assets/img/production-1.jpg">
+                        <div class="image-container portrait">
+                            <img src="assets/img/photo_2025-09-17_20-01-46.jpg" alt="Production process" 
+                                 class="gallery-image">
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+
+                <div class="gallery-item-wrapper">
+                    <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image="assets/img/production-1.jpg">
+                        <div class="image-container portrait">
+                            <img src="assets/img/photo_2025-09-17_20-01-43.jpg" alt="Production process" 
+                                 class="gallery-image">
+                        </div>
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products -->
+<section id="products" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Related Products</h2>
+            <p class="text-muted">Air ducts, flange connectors, tees, high-pressure oil lines</p>
         </div>
 
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="assets/img/engine-parts.JPG" class="card-img-top" alt="Детали двигателя">
+                    <div style="background: #e9ecef; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/air_pipe.png" alt="Production process">
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">Детали двигателя</h5>
-                        <p class="card-text">Поршни, кольца, вкладыши, прокладки и другие компоненты двигателя</p>
+                        <h5 class="card-title">Intercooler pipes</h5>
+                        <p class="card-text">A component of the turbocharging system that connects the intercooler to the turbine.</p>
                     </div>
                     <div class="card-footer bg-transparent">
-                        <a href="#" class="btn btn-primary">Подробнее</a>
+                        <a href="#" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="assets/img/suspension.JPG" class="card-img-top" alt="Подвеска">
+                    <div style="background: #e9ecef; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/mtl.png" alt="Production process">
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">Подвеска</h5>
-                        <p class="card-text">Амортизаторы, рычаги, шаровые опоры, сайлентблоки</p>
+                        <h5 class="card-title">Oil pipes</h5>
+                        <p class="card-text">Used in engine lubrication systems, transmissions and other vehicle components to supply oil.</p>
                     </div>
                     <div class="card-footer bg-transparent">
-                        <a href="#" class="btn btn-primary">Подробнее</a>
+                        <a href="#" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="assets/img/brake-system.JPG" class="card-img-top" alt="Тормозная система">
+                    <div style="background: #e9ecef; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/img/fl.png" alt="Production process">
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">Тормозная система</h5>
-                        <p class="card-text">Колодки, диски, суппорты, тормозные шланги</p>
+                        <h5 class="card-title">Cooling system flanges</h5>
+                        <p class="card-text">Element of the vehicle cooling system that provides a sealed connection between the radiator, pump and pipes.</p>
                     </div>
                     <div class="card-footer bg-transparent">
-                        <a href="#" class="btn btn-primary">Подробнее</a>
+                        <a href="#" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="text-center mt-4">
-            <a href="#" class="btn btn-outline-primary btn-lg">Весь каталог</a>
+            <a href="#" class="btn btn-outline-primary btn-lg">Full Catalog</a>
         </div>
     </div>
 </section>
 
-<!-- Галерея -->
-<section id="gallery" class="py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Наше производство</h2>
-            <p class="text-muted">Современные технологии и контроль качества</p>
-        </div>
-
-        <div class="row g-3">
-            <div class="col-md-4">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal">
-                    <img src="assets/img/production-1.JPG" class="img-fluid rounded shadow-sm" alt="Производство">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal">
-                    <img src="assets/img/production-2.JPG" class="img-fluid rounded shadow-sm" alt="Контроль качества">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal">
-                    <img src="assets/img/production-3.JPG" class="img-fluid rounded shadow-sm" alt="Склад">
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- О компании -->
+<!-- About Company -->
 <section id="about" class="py-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <img src="assets/img/about-company.jpg" class="img-fluid rounded shadow" alt="О компании Mannor">
+                <div style="background: #e9ecef; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                    <p>About Company Image</p>
+                </div>
             </div>
             <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">О компании Mannor</h2>
-                <p>Mannor - это современный производитель автомобильных запчастей, основанный в 2005 году. За годы работы мы зарекомендовали себя как надежный поставщик качественных деталей для автомобилей различных марок.</p>
-                <p>Наше производство оснащено современным оборудованием, что позволяет выпускать продукцию, соответствующую международным стандартам качества.</p>
+                <h2 class="fw-bold mb-4">About MR MANNOR</h2>
+                <p>MR MANNOR is a modern manufacturer of automotive parts, founded in 2005. Over the years, we have established ourselves as a reliable supplier of quality parts for various car brands.</p>
+                <p>Our production is equipped with modern equipment, which allows us to manufacture products that meet international quality standards.</p>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Более 15 лет на рынке</li>
-                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Собственные производственные мощности</li>
-                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Сертифицированная продукция</li>
-                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Поставки по всей стране</li>
+                    <li class="mb-2"><i class="fas fa-check me-2" style="color: #0066cc;"></i> Over 15 years in the market</li>
+                    <li class="mb-2"><i class="fas fa-check me-2" style="color: #0066cc;"></i> Own production facilities</li>
+                    <li class="mb-2"><i class="fas fa-check me-2" style="color: #0066cc;"></i> Certified products</li>
+                    <li class="mb-2"><i class="fas fa-check me-2" style="color: #0066cc;"></i> Nationwide deliveries</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Контакты -->
+<!-- Contacts -->
 <section id="contacts" class="py-5 bg-dark text-white">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="fw-bold mb-4">Свяжитесь с нами</h2>
-                <p>Если у вас есть вопросы о нашей продукции или вы хотите стать дилером, заполните форму обратной связи.</p>
+                <h2 class="fw-bold mb-4">Contact Us</h2>
+                <p>If you have questions about our products or want to become a dealer, please fill out the feedback form.</p>
 
                 <div class="mt-4">
-                    <h5 class="fw-bold">Контактная информация</h5>
+                    <h5 class="fw-bold">Contact Information</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> г. Волгорад, ул. Кукуева, 15</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Volgograd, Kukueva St., 15</li>
                         <li class="mb-2"><i class="fas fa-phone me-2"></i> +7 (800) 555-35-35</li>
-                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@mannor.ru</li>
-                        <li class="mb-2"><i class="fas fa-clock me-2"></i> Пн-Пт: 9:00 - 18:00</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@mrmannor.ru</li>
+                        <li class="mb-2"><i class="fas fa-clock me-2"></i> Mon-Fri: 9:00 - 18:00</li>
                     </ul>
                 </div>
             </div>
 
             <div class="col-lg-6">
-                <form>
+                <form id="contactForm">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Ваше имя</label>
+                        <label for="name" class="form-label">Your Name</label>
                         <input type="text" class="form-control" id="name" required>
                     </div>
                     <div class="mb-3">
@@ -237,26 +350,26 @@
                         <input type="email" class="form-control" id="email" required>
                     </div>
                     <div class="mb-3">
-                        <label for="phone" class="form-label">Телефон</label>
+                        <label for="phone" class="form-label">Phone</label>
                         <input type="tel" class="form-control" id="phone">
                     </div>
                     <div class="mb-3">
-                        <label for="message" class="form-label">Сообщение</label>
+                        <label for="message" class="form-label">Message</label>
                         <textarea class="form-control" id="message" rows="3" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Отправить</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Футер -->
+<!-- Footer -->
 <footer class="py-4 bg-black text-white-50">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start">
-                <p class="mb-0">&copy; 2025 Mannor. Все права защищены.</p>
+                <p class="mb-0">&copy; 2025 MR MANNOR. All rights reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <a href="#" class="text-white-50 me-3"><i class="fab fa-vk"></i></a>
@@ -268,34 +381,260 @@
     </div>
 </footer>
 
-<!-- Модальное окно галереи -->
+<!-- Bootstrap & Custom JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Basic JavaScript functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Form validation
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && message) {
+                alert('Thank you for your message! We will contact you soon.');
+                contactForm.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+    }
+});
+</script>
+
+<!-- Gallery Modal with Carousel -->
 <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
+                <h5 class="modal-title">Production Gallery</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body text-center">
-                <img src="" class="img-fluid" id="galleryImage" alt="">
+            <div class="modal-body">
+                <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                    </div>
+                    <div class="carousel-inner">
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Скрипты -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const imageModal = document.getElementById('imageModal');
+    if (imageModal) {
+        imageModal.addEventListener('show.bs.modal', function(event) {
+            const trigger = event.relatedTarget;
+            const imageUrl = trigger.getAttribute('data-image');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageUrl;
+            
+            const altText = trigger.querySelector('img').alt;
+            modalImage.alt = altText;
+            
+            document.getElementById('imageModalLabel').textContent = altText;
+        });
+    }
+});
+</script>
 
 <script>
-    // Инициализация модального окна галереи
-    document.querySelectorAll('[data-bs-target="#galleryModal"]').forEach(el => {
-        el.addEventListener('click', function(e) {
-            e.preventDefault();
-            const imgSrc = this.querySelector('img').src;
-            document.getElementById('galleryImage').src = imgSrc;
-        });
+    // Enhanced Hero Image Slider
+    document.addEventListener('DOMContentLoaded', function() {
+        const heroImages = document.querySelectorAll('.hero-image');
+        const indicators = document.querySelectorAll('.hero-slider-indicator');
+        let currentImageIndex = 0;
+        let slideInterval;
+        
+        if (heroImages.length > 0) {
+            function changeHeroImage(newIndex = null) {
+                const nextIndex = newIndex !== null ? newIndex : (currentImageIndex + 1) % heroImages.length;
+                
+                heroImages[currentImageIndex].classList.remove('active');
+                indicators[currentImageIndex].classList.remove('active');
+                
+                currentImageIndex = nextIndex;
+                
+                heroImages[currentImageIndex].classList.add('active');
+                indicators[currentImageIndex].classList.add('active');
+            }
+            
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    clearInterval(slideInterval);
+                    changeHeroImage(index);
+                    // restartAutoSlider();
+                });
+            });
+            
+            function restartAutoSlider() {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(changeHeroImage, 5000);
+            }
+            
+            restartAutoSlider();
+            
+            const heroContainer = document.querySelector('.hero-image-container');
+            if (heroContainer) {
+                heroContainer.addEventListener('mouseenter', function() {
+                    clearInterval(slideInterval);
+                });
+                
+                heroContainer.addEventListener('mouseleave', function() {
+                    restartAutoSlider();
+                });
+            }
+            
+            heroImages[0].classList.add('active');
+            indicators[0].classList.add('active');
+        }
     });
-</script>
+    </script>
+
+<script>
+    const galleryImages = [
+        'assets/img/gallery/photo_71.jpg',
+        'assets/img/gallery/photo_70.jpg',
+        'assets/img/gallery/photo_69.jpg',
+        'assets/img/gallery/photo_68.jpg',
+        'assets/img/gallery/photo_67.jpg',
+        'assets/img/gallery/photo_66.jpg',
+        'assets/img/gallery/photo_65.jpg',
+        'assets/img/gallery/photo_64.jpg',
+        'assets/img/gallery/photo_63.jpg',
+        'assets/img/gallery/photo_62.jpg',
+        'assets/img/gallery/photo_61.jpg',
+        'assets/img/gallery/photo_60.jpg',
+        'assets/img/gallery/photo_59.jpg',
+        'assets/img/gallery/photo_58.jpg',
+        'assets/img/gallery/photo_57.jpg',
+        'assets/img/gallery/photo_56.jpg',
+        'assets/img/gallery/photo_55.jpg',
+        'assets/img/gallery/photo_54.jpg',
+        'assets/img/gallery/photo_53.jpg',
+        'assets/img/gallery/photo_52.jpg',
+        'assets/img/gallery/photo_51.jpg',
+        'assets/img/gallery/photo_50.jpg',
+        'assets/img/gallery/photo_49.jpg',
+        'assets/img/gallery/photo_48.jpg',
+        'assets/img/gallery/photo_47.jpg',
+        'assets/img/gallery/photo_46.jpg',
+        'assets/img/gallery/photo_45.jpg',
+        'assets/img/gallery/photo_44.jpg',
+        'assets/img/gallery/photo_43.jpg',
+        'assets/img/gallery/photo_42.jpg',
+        'assets/img/gallery/photo_41.jpg',
+        'assets/img/gallery/photo_40.jpg',
+        'assets/img/gallery/photo_39.jpg',
+        'assets/img/gallery/photo_38.jpg',
+        'assets/img/gallery/photo_37.jpg',
+        'assets/img/gallery/photo_36.jpg',
+        'assets/img/gallery/photo_35.jpg',
+        'assets/img/gallery/photo_34.jpg',
+        'assets/img/gallery/photo_33.jpg',
+        'assets/img/gallery/photo_32.jpg',
+        'assets/img/gallery/photo_31.jpg',
+        'assets/img/gallery/photo_30.jpg',
+        'assets/img/gallery/photo_29.jpg',
+        'assets/img/gallery/photo_28.jpg',
+        'assets/img/gallery/photo_27.jpg',
+        'assets/img/gallery/photo_26.jpg',
+        'assets/img/gallery/photo_25.jpg',
+        'assets/img/gallery/photo_24.jpg',
+        'assets/img/gallery/photo_23.jpg',
+        'assets/img/gallery/photo_22.jpg',
+        'assets/img/gallery/photo_21.jpg',
+        'assets/img/gallery/photo_20.jpg',
+        'assets/img/gallery/photo_19.jpg',
+        'assets/img/gallery/photo_18.jpg',
+        'assets/img/gallery/photo_17.jpg',
+        'assets/img/gallery/photo_16.jpg',
+        'assets/img/gallery/photo_15.jpg',
+        'assets/img/gallery/photo_14.jpg',
+        'assets/img/gallery/photo_13.jpg',
+        'assets/img/gallery/photo_12.jpg',
+        'assets/img/gallery/photo_11.jpg',
+        'assets/img/gallery/photo_10.jpg',
+        'assets/img/gallery/photo_9.jpg',
+        'assets/img/gallery/photo_8.jpg',
+        'assets/img/gallery/photo_7.jpg',
+        'assets/img/gallery/photo_6.jpg',
+        'assets/img/gallery/photo_5.jpg',
+        'assets/img/gallery/photo_4.jpg',
+        'assets/img/gallery/photo_3.jpg',
+        'assets/img/gallery/photo_2.jpg'
+    ];
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryModal = document.getElementById('galleryModal');
+        const carouselInner = document.querySelector('#galleryCarousel .carousel-inner');
+        const carouselIndicators = document.querySelector('#galleryCarousel .carousel-indicators');
+        
+        if (galleryModal && carouselInner) {
+            galleryModal.addEventListener('show.bs.modal', function() {
+                carouselInner.innerHTML = '';
+                carouselIndicators.innerHTML = '';
+                
+                galleryImages.forEach((imageSrc, index) => {
+                    const carouselItem = document.createElement('div');
+                    carouselItem.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+                    
+                    const img = document.createElement('img');
+                    img.src = imageSrc;
+                    img.className = 'd-block w-100 gallery-modal-image';
+                    img.alt = `Production image ${index + 1}`;
+                    
+                    carouselItem.appendChild(img);
+                    carouselInner.appendChild(carouselItem);
+                    
+                    const indicator = document.createElement('button');
+                    indicator.type = 'button';
+                    indicator.dataset.bsTarget = '#galleryCarousel';
+                    indicator.dataset.bsSlideTo = index;
+                    indicator.className = index === 0 ? 'active' : '';
+                    indicator.setAttribute('aria-label', `Slide ${index + 1}`);
+                    
+                    carouselIndicators.appendChild(indicator);
+                });
+            });
+        }
+    });
+    </script>
+
 </body>
 
 </html>
